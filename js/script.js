@@ -103,14 +103,24 @@ $(document).ready(
         family: "fas"
       },
     ];
-    
 
     var icon_container = $("#icon-container");
 
     print(icons, icon_container);
 
+
+// milestone 2:
+// definire un array di colori e associare ad ogni tipo di icona un colore.
+// Visualizzare le icone di colore diverso in base al tipo.
+
+    const colors = ["salmon", "cyan", "navy"];
+    console.log(colors);
+
+    const type = typeColor(icons)
+    console.log(type);
+
   }
-)
+);
 
 
 //---------------------------------
@@ -132,3 +142,17 @@ function print(array, container) {
 
 
 };
+
+function typeColor(array) {
+  const filteredType = [];
+  array.forEach(
+    (element) => {
+      if (filteredType.includes(element.type) == false) {
+        filteredType.push(element.type);
+      };
+    }
+  );
+  // console.log(filteredType);
+  return filteredType;
+
+}
