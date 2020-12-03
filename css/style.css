@@ -4,7 +4,34 @@
   padding: 0;
 }
 
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
 #icon-container {
-  /* height: 100vh; */
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+
   background-color: grey;
+}
+
+.icons {
+  width: 200px;
+  height: 120px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+.icons i {
+  font-size: 40px;
+}
+.icons h2 {
+  /* line-height: 80px; */
 }

@@ -103,22 +103,11 @@ $(document).ready(
         family: "fas"
       },
     ];
-    // console.log(icons);
+    
 
     var icon_container = $("#icon-container");
-    // console.log(icon_container);
+
     print(icons, icon_container);
-    print(icons, icon_container);
-    // icons.forEach(
-    //   (element, index) => {
-    //     // console.log(element);
-    //     icon_container.append(`
-    //       ${element.name}
-    //       <i class="${element.family} ${element.prefix}${element.name}"></i>
-    //       `)
-    //     // console.log(icon_container);
-    //   }
-    // );
 
   }
 )
@@ -131,10 +120,9 @@ function print(array, container) {
     (element) => {
 
       const {family, prefix, name} = element;
-      console.log("Destruct ", family, prefix, name);
 
       container.append(`
-        <div>
+        <div class="icons">
           <i class="${family} ${prefix}${name}"></i>
           <h2>${name.toUpperCase()}</h2>
         </div>
@@ -143,4 +131,4 @@ function print(array, container) {
   );
 
 
-}
+};
