@@ -107,17 +107,18 @@ $(document).ready(
 
     var icon_container = $("#icon-container");
     // console.log(icon_container);
-
-    icons.forEach(
-      (element, index) => {
-        // console.log(element);
-        icon_container.append(`
-          ${element.name}
-          <i class="${element.family} ${element.prefix}${element.name}"></i>
-          `)
-        console.log(icon_container);
-      }
-    );
+    print(icons, icon_container);
+    print(icons, icon_container);
+    // icons.forEach(
+    //   (element, index) => {
+    //     // console.log(element);
+    //     icon_container.append(`
+    //       ${element.name}
+    //       <i class="${element.family} ${element.prefix}${element.name}"></i>
+    //       `)
+    //     // console.log(icon_container);
+    //   }
+    // );
 
   }
 )
@@ -125,10 +126,19 @@ $(document).ready(
 
 //---------------------------------
 function print(array, container) {
-
+  container.html("");
   array.forEach(
     (element) => {
 
+      const {family, prefix, name} = element;
+      console.log("Destruct ", family, prefix, name);
+
+      container.append(`
+        <div>
+          <i class="${family} ${prefix}${name}"></i>
+          <h2>${name.toUpperCase()}</h2>
+        </div>
+        `)
     }
   );
 
